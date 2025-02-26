@@ -1,8 +1,8 @@
-
 const display = document.getElementById('display');
 const buttons = document.querySelectorAll('.button');
 
 let currentInput = '';
+
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
@@ -13,17 +13,18 @@ buttons.forEach(button => {
             currentInput = '';
             display.value = '';
         } else if (buttonText === '=') {
-          
+            
             try {
-                currentInput = eval(currentInput).toString();
+                currentInput = eval(currentInput).toString(); 
                 display.value = currentInput;
             } catch (error) {
                 display.value = 'Error';
-                currentInput = '';
+                currentInput = ''; 
             }
         } else {
-           
-            display.value = currentInput;
+            
+            currentInput += buttonText;
+            display.value = currentInput; 
         }
     });
 });

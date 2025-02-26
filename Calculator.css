@@ -7,7 +7,8 @@ body {
     margin: 0;
     background-color: #f4f4f4;
 }
-h1{
+
+h1 {
     text-align: center;
     color: rgb(54, 28, 118);
 }
@@ -52,4 +53,3 @@ h1{
 .button:hover {
     background-color: #cb9bc6;
 }
-
